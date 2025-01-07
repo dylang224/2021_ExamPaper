@@ -13,8 +13,8 @@ namespace _2021_ExamPaper
 
 
         //constructors
-        public SavingsAccount(string firstName, string lastName, decimal balance, DateTime interestDate)
-            : base(firstName, lastName, balance, interestDate) { }
+        public SavingsAccount(string firstName, string lastName, decimal balance, DateTime interestDate, string accountNumber)
+            : base(firstName, lastName, balance, interestDate, accountNumber) { }
 
         //methods
 
