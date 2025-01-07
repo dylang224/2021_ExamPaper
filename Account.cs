@@ -31,6 +31,11 @@ namespace _2021_ExamPaper
             
         }
 
+        public Account()
+        {
+
+        } 
+
         public Account(string firstName, string lastName) :this(firstName,lastName,0,DateTime.Now)
         {
             
