@@ -31,8 +31,8 @@
         <TextBlock x:Name="tblkAccountType" HorizontalAlignment="Left" Margin="493,202,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="19"/>
         <TextBlock x:Name="tblkBalance" HorizontalAlignment="Left" Margin="493,244,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="19"/>
         <TextBlock x:Name="tblkInterestDate" HorizontalAlignment="Left" Margin="493,274,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="19"/>
-        <TextBox x:Name="tbxTransactionAmount" HorizontalAlignment="Left" Margin="493,303,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="21"/>
-        <Button x:Name="btnDeposit" Content="Deposit" HorizontalAlignment="Left" Margin="673,98,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxTransactionAmount" HorizontalAlignment="Left" Margin="493,303,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="21"  GotFocus="tbxTransactionAmount_GotFocus"/>
+        <Button x:Name="btnDeposit" Content="Deposit" HorizontalAlignment="Left" Margin="673,98,0,0" VerticalAlignment="Top" Click="btnDeposit_Click"/>
         <Button x:Name="btnWithdraw" Content="Withdraw" HorizontalAlignment="Left" Margin="673,148,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnInterest" Content="Interest" HorizontalAlignment="Left" Margin="673,196,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="cbSavings" Content="Savings Account" HorizontalAlignment="Left" Margin="199,62,0,0" VerticalAlignment="Top" Click="checkBox_Click"/>
