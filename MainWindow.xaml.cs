@@ -20,6 +20,7 @@ namespace _2021_ExamPaper
     public partial class MainWindow : Window
     {
         List<Account> accounts = new List<Account>();
+        List<Account> filteredAccounts = new List<Account>();
 
         public MainWindow()
         {
@@ -64,6 +65,51 @@ namespace _2021_ExamPaper
             }
 
 
+        }
+
+        private void checkBox_Click(object sender, RoutedEventArgs e)
+        {
+            //reset the listbox display
+            lbxAccounts.ItemsSource = null;
+            //clear the filter
+            filteredAccounts.Clear();
+
+            //determine what checkbox was selected
+            bool savings = false, current = false;
+
+            if (cbCurrent.IsChecked.Value)
+                current = true;
+
+            if(cbSavings.IsChecked.Value) 
+                savings = true;
+            //update display
+
+            if (current && savings)
+            {
+                lbxAccounts.ItemsSource = accounts;
+            }
+
+            //filter accounts
+            else if (current)
+            {
+                foreach (Account account in accounts)
+                {
+                    if (account is CurrentAccount)
+                        filteredAccounts.Add(account);
+                }
+                lbxAccounts.ItemsSource = filteredAccounts;
+            }
+
+            else if (savings)
+            {
+                foreach (Account account in accounts)
+                {
+                    if (account is SavingsAccount)
+                        filteredAccounts.Add(account);
+                }
+                lbxAccounts.ItemsSource = filteredAccounts;
+
+            }
         }
     }
 }

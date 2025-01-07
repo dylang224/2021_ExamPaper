@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800"
         Loaded="Window_Loaded">
     <Grid>
-        <CheckBox Content="Current Accounts" HorizontalAlignment="Left" Margin="67,62,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbCurrent" Content="Current Accounts" HorizontalAlignment="Left" Margin="67,62,0,0" VerticalAlignment="Top" Click="checkBox_Click"/>
         <ListBox x:Name="lbxAccounts" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="63,92,449,22" RenderTransformOrigin="0.5,0.5" SelectionChanged="lbxAccounts_SelectionChanged">
             <ListBox.RenderTransform>
                 <TransformGroup>
@@ -35,6 +35,6 @@
         <Button x:Name="btnDeposit" Content="Deposit" HorizontalAlignment="Left" Margin="673,98,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnWithdraw" Content="Withdraw" HorizontalAlignment="Left" Margin="673,148,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnInterest" Content="Interest" HorizontalAlignment="Left" Margin="673,196,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="cbSavings" Content="Savings Account" HorizontalAlignment="Left" Margin="199,62,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbSavings" Content="Savings Account" HorizontalAlignment="Left" Margin="199,62,0,0" VerticalAlignment="Top" Click="checkBox_Click"/>
     </Grid>
 </Window>
