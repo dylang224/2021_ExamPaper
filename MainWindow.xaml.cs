@@ -142,5 +142,35 @@ namespace _2021_ExamPaper
         {
             tbxTransactionAmount.Clear();
         }
+
+        private void btnWithdraw_Click(object sender, RoutedEventArgs e)
+        {
+            //read amount to withdraw
+            decimal amount = 0;
+            if (Decimal.TryParse(tbxTransactionAmount.Text, out amount))
+            {
+                //determine selected account
+                Account selected = lbxAccounts.SelectedItem as Account;
+
+                if (selected != null)
+                {
+                    //withdraw amount
+                    selected.Withdraw(amount);
+                    UpdateDisplay(selected);
+                }
+
+
+            }
+        }
+
+        private void btnInterest_Click(object sender, RoutedEventArgs e)
+        {
+            Account selected = lbxAccounts.SelectedItem as Account;
+            if (selected != null) 
+            {
+                selected.CalculateInterest();
+                UpdateDisplay(selected);
+            }
+        }
     }
 }
